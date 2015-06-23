@@ -78,7 +78,9 @@
     
     [self.storyEventRefs addObject:storyDescriptionRef];
     [storyDescriptionRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-
+        
+        NSLog(@"x");
+        
         NSDictionary *responseDictionary = snapshot.value;
         
         if([responseDictionary isKindOfClass:[NSDictionary class]] && [responseDictionary objectForKey:@"id"] != nil){
@@ -547,27 +549,41 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HNTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HNCell" forIndexPath:indexPath];
+     HNTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HNCell" forIndexPath:indexPath];
     
     cell = [self configureCell:cell forIndex:[indexPath item]];
     
     [cell setNeedsDisplay];
     [cell layoutIfNeeded];
     
-   
-    //save cell height for later use in tableView:estimatedHeightForRowAtIndexPath:indexPath
-    //if only estimated cell height is returned from that method once the actual heights are known
-    //than on return from segue tableview appears to have scrolled a bit
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //NSMutableIndexPath to NSIndexPath
     indexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
     
-    CGSize cellSize = [cell systemLayoutSizeFittingSize:CGSizeMake(self.view.frame.size.width, 0) withHorizontalFittingPriority:1000.0 verticalFittingPriority:50.0];
-    [self.rowHeights setObject:[NSNumber numberWithFloat:cellSize.height] forKey:indexPath];
- 
-    return cell;
+    if([self.rowHeights objectForKey:indexPath] == nil){
+        
+        HNTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HNCell"];
+        
+        cell = [self configureCell:cell forIndex:[indexPath item]];
+        [cell setNeedsDisplay];
+        [cell layoutIfNeeded];
+        
+         CGSize cellSize = [cell systemLayoutSizeFittingSize:CGSizeMake(self.view.frame.size.width, 0) withHorizontalFittingPriority:1000.0 verticalFittingPriority:50.0];
+        
+        //save cell height for later use in tableView:estimatedHeightForRowAtIndexPath:indexPath
+        //if only estimated cell height is returned from that method once the actual heights are known
+        //than on return from segue tableview appears to have scrolled a bit
+        [self.rowHeights setObject:[NSNumber numberWithFloat:cellSize.height] forKey:indexPath];
+        
+    }
+    
+    return [[self.rowHeights objectForKey:indexPath] floatValue];
+    
 }
-
 
 
 #pragma mark - UITableViewDelegate
