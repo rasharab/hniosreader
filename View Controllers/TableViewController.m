@@ -536,6 +536,7 @@
     [self.commentNumberViews setObject:commentNumberView forKey:itemNumber];
 
     commentNumberView.tag = 201;
+     NSLog(@"%@", NSStringFromCGRect(commentNumberView.frame));
     [[cell.contentView viewWithTag:201] removeFromSuperview];
     [cell.contentView addSubview:commentNumberView];
     
