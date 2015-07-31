@@ -121,7 +121,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
     
     NSInteger sectionNumber = [indexPath section];
     
