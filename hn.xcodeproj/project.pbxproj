@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6460242C99F0045B46D3523C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D5DB0F359902CF4BDFAA39 /* CoreTelephony.framework */; };
+		693E4688646F33740EF218AF /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E766C8E16396E6B123C9A8DD /* BuddyBuildSDK.framework */; };
+		6E111151A51B14840CEB32C8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A9DA0828BDA08CA0A84F20 /* CoreText.framework */; };
 		B80AAB6B19F96B5100B6A895 /* RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B80AAB6A19F96B5100B6A895 /* RandomColor.m */; };
 		B80ACBA01A59FAA3007DC58C /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = B80ACB9F1A59FAA3007DC58C /* Story.m */; };
 		B80FB6D119E988F800CE7A21 /* PrepareCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80FB6D019E988F800CE7A21 /* PrepareCommentsViewController.m */; };
@@ -51,6 +54,7 @@
 		B8CDFE341A5B7B1900E2D9CC /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CDFE331A5B7B1900E2D9CC /* DataStore.m */; };
 		B8EE1B3D19E8551B004267EA /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EE1B3C19E8551B004267EA /* CommentTableViewCell.m */; };
 		B8F52FC719E884DA00C7F640 /* labelVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F52FC619E884DA00C7F640 /* labelVIew.m */; };
+		C2A7C6E022EBA7AB96694FC0 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4961BC5EFE30BBBA62CE2CD2 /* AssetsLibrary.framework */; };
 		D3305AAB1A0A7B620063B3A0 /* NSString+RemoveTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D3305AAA1A0A7B620063B3A0 /* NSString+RemoveTag.m */; };
 		D344D68919E59A8900EE5880 /* HNTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D344D68819E59A8900EE5880 /* HNTableViewCell.m */; };
 		D353348A19E544DF0060B70D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D353348919E544DF0060B70D /* main.m */; };
@@ -95,6 +99,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25A9DA0828BDA08CA0A84F20 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		4961BC5EFE30BBBA62CE2CD2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		62D5DB0F359902CF4BDFAA39 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7571192AB6564A6EA5F9166D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A18F70820EDFA133FF4A3EF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B80AAB6919F96B5100B6A895 /* RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomColor.h; path = Utils/RandomColor.h; sourceTree = "<group>"; };
@@ -217,6 +224,7 @@
 		D3FD0DC919E5732E00DE43E5 /* SVWebViewControllerActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivity.m; sourceTree = "<group>"; };
 		D3FD0DCA19E5732E00DE43E5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
 		D3FD0DCB19E5732E00DE43E5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		E766C8E16396E6B123C9A8DD /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +239,10 @@
 				D35334B819E547E50060B70D /* libc++.dylib in Frameworks */,
 				D35334B619E547DB0060B70D /* libicucore.dylib in Frameworks */,
 				F323E55FD2E34BFA8DBE8609 /* libPods.a in Frameworks */,
+				693E4688646F33740EF218AF /* BuddyBuildSDK.framework in Frameworks */,
+				C2A7C6E022EBA7AB96694FC0 /* AssetsLibrary.framework in Frameworks */,
+				6E111151A51B14840CEB32C8 /* CoreText.framework in Frameworks */,
+				6460242C99F0045B46D3523C /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +266,10 @@
 				D35334B719E547E50060B70D /* libc++.dylib */,
 				D35334B519E547DB0060B70D /* libicucore.dylib */,
 				7571192AB6564A6EA5F9166D /* libPods.a */,
+				E766C8E16396E6B123C9A8DD /* BuddyBuildSDK.framework */,
+				4961BC5EFE30BBBA62CE2CD2 /* AssetsLibrary.framework */,
+				25A9DA0828BDA08CA0A84F20 /* CoreText.framework */,
+				62D5DB0F359902CF4BDFAA39 /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
